@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Cloud & DevOps Assignment 8</title>
+  <meta name="description" content="Cloud and DevOps Assignment 8 - CI/CD integrated with Jenkins and AWS EC2." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Primary">
+      <h1 class="logo" aria-label="Assignment Title">Cloud & DevOps</h1>
+    </nav>
+  </header>
+  <main class="content" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <h2 id="hero-title">Cloud and DevOps Assignment 8</h2>
+        <p class="tagline">This static site is integrated with a Jenkins CI/CD pipeline deploying to an AWS EC2 instance for smooth automation.</p>
+        <div class="cta-group">
+          <a class="btn primary" href="#pipeline" aria-describedby="pipeline-desc">View Pipeline Overview</a>
+          <a class="btn" href="https://www.jenkins.io/" target="_blank" rel="noopener noreferrer">Jenkins Docs</a>
+        </div>
+      </div>
+    </section>
+    <section id="pipeline" class="panel" aria-labelledby="pipeline-heading">
+      <h3 id="pipeline-heading">Pipeline Overview</h3>
+      <p id="pipeline-desc">On each commit: Jenkins checks out code, validates HTML/CSS, and deploys the updated site to the EC2 web server. Deployment is zero-downtime using a symlink swap strategy (placeholder). Secrets are injected via Jenkins credentials.</p>
+      <ol class="steps">
+        <li><strong>Commit:</strong> Push changes to main or open a PR.</li>
+        <li><strong>Build:</strong> Jenkins runs lint/validation (HTML tidy, CSS checks).</li>
+        <li><strong>Package:</strong> Artifact archived for traceability.</li>
+        <li><strong>Deploy:</strong> Secure copy to EC2 and activate new release.</li>
+        <li><strong>Verify:</strong> Simple health check request.</li>
+      </ol>
+    </section>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <p>&copy; <span id="year"></span> Cloud & DevOps Assignment 8. CI/CD powered by Jenkins + AWS EC2.</p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
