@@ -1,0 +1,167 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 100%);
+    padding: 60px 40px;
+    text-align: center;
+}
+
+header h1 {
+    color: #2d5a4a;
+    font-size: 3em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.subtitle {
+    color: #4a7c59;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+/* Main Content */
+main {
+    padding: 40px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: #ff8b94;
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ffd3b6;
+    padding-bottom: 10px;
+}
+
+/* Intro Section */
+.intro-section p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.8;
+}
+
+.intro-section strong {
+    color: #ff8b94;
+}
+
+/* Topics Grid */
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.topic-card {
+    background: linear-gradient(135deg, #ffd3e1 0%, #ffecd2 100%);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #ffaaa5;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 139, 148, 0.3);
+}
+
+.topic-card h3 {
+    color: #d4816f;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.topic-card p {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Benefits Section */
+.benefits-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.benefits-section li {
+    background: linear-gradient(135deg, #dcedc1 0%, #d4f0f0 100%);
+    padding: 15px 25px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border-left: 5px solid #a8e6cf;
+    color: #2d5a4a;
+    font-size: 1.1em;
+    transition: transform 0.2s ease;
+}
+
+.benefits-section li:hover {
+    transform: translateX(10px);
+}
+
+.benefits-section li::before {
+    content: '✓ ';
+    color: #4a7c59;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #c7ceea 0%, #e0c3fc 100%);
+    padding: 30px;
+    text-align: center;
+    color: #6b5b95;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .subtitle {
+        font-size: 1.2em;
+    }
+    
+    main {
+        padding: 25px;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    .topics-grid {
+        grid-template-columns: 1fr;
+    }
+}
