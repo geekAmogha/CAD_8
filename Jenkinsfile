@@ -1,8 +1,8 @@
 pipeline {
   agent any
   environment {
-    DEPLOY_HOST = 'YOUR.EC2.PUBLIC.DNS'        // Replace with actual EC2 public DNS or IP
-    DEPLOY_USER = 'ec2-user'                   // Or 'ubuntu' depending on AMI
+    DEPLOY_HOST = 'ec2-43-204-108-165.ap-south-1.compute.amazonaws.com'        // Replace with actual EC2 public DNS or IP
+    DEPLOY_USER = 'ubuntu'                   // Or 'ubuntu' depending on AMI
     RELEASE_DIR = '/var/www/assignment8/releases'
     CURRENT_LINK = '/var/www/assignment8/current'
   }
